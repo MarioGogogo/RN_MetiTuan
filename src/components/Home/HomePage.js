@@ -6,7 +6,7 @@ import SpacingView from "../../common/SpacingView"
 import ActiveView from './ActiveView'
 import LimitTimeView from './LimitTimeView'
 import GroupPurchaseCell from './GroupPurchaseCell'
-
+import {Actions, Scene, Router} from 'react-native-router-flux'
 
 import api from '../../config/mock'
 

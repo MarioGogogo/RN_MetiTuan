@@ -19,7 +19,8 @@ export default class SplashView extends Component {
   }
   componentDidMount() {
     this.timer=setTimeout(() => {
-      Actions.mainpage();
+      //清除路由堆栈并将场景推入第一个索引. 没有过渡动画。
+      Actions.reset('mainpage')
     }, 2000);
   }
 
