@@ -10,8 +10,8 @@ import {
 } from 'react-native'
 import TabNavigator from 'react-native-tab-navigator'
 import  HomePage from '../src/components/Home/HomePage'
-
-
+import NearbyPage from  '../src/components/Nearby/NearbyPage'
+import MinePage_1 from "./components/Mine/MinePage"
 import Icon from 'react-native-vector-icons/dist/Ionicons';
 import Theme from './common/theme'
 import { inject, observer } from 'mobx-react';
@@ -40,6 +40,7 @@ export default class MainPage extends Component {
     }
   }
   onPress(tabName) {
+    console.log(tabName)
     if (tabName) {
       this.setState({
           selectedTab: tabName,
@@ -58,7 +59,7 @@ export default class MainPage extends Component {
        case 'Nearby':
          tabNomal = TAB_NEARBY_NORMAL;
          tabPress = TAB_NEARBY_PRESS;
-         tabPage = <HomePage {...this.props}/>;
+         tabPage = <NearbyPage {...this.props}/>;
          break;
        case 'Discover':
          tabNomal = TAB_DISCOVER_NORMAL;
@@ -73,7 +74,7 @@ export default class MainPage extends Component {
        case 'Mine':
          tabNomal = TAB_MINE_NORMAL;
          tabPress = TAB_MINE_PRESS;
-         tabPage = <HomePage {...this.props}/>;
+         tabPage = <MinePage_1 {...this.props}/>;
          break;
        default:
      }
@@ -108,10 +109,10 @@ export default class MainPage extends Component {
       <SafeAreaView style={styles.container}>
         <TabNavigator style={styles.tabStyle}>
           {this.renderTabView('首页','Home',HomePage,false)}
-          {this.renderTabView('附近', 'Nearby', HomePage, false)}
-          {this.renderTabView('逛一逛', 'Discover', HomePage, false)}
+          {this.renderTabView('附近', 'Nearby', NearbyPage, false)}
+          {this.renderTabView('逛一逛', 'Discover', MinePage_1, false)}
           {this.renderTabView('订单', 'Order', HomePage, false)}
-          {this.renderTabView('我的', 'Mine', HomePage, false)}
+          {this.renderTabView('我的', 'Mine', MinePage_1, false)}
         </TabNavigator>
       </SafeAreaView>
 

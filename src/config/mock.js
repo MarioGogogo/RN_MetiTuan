@@ -2292,5 +2292,25 @@ export default {
       typeface_color:"#229e32",
       deputytitle:"周四打折要的快来",
       imageurl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576089323253&di=db1f36fcf4606e85241f642a8e7a215c&imgtype=0&src=http%3A%2F%2Fwww.quanmama.com%2FAdminImageUpload%2Fueditor%2Fimage%2F20151215%2F6358579708299097543619484.png"
-    }]
+    }],
+  //设置数据
+  setting: [
+    [
+      {title: '我的钱包', subtitle: '办信用卡', image: require('../images/icon_mine_wallet.png')},
+      {title: '余额', subtitle: '￥95872385', image: require('../images/icon_mine_balance.png')},
+      {title: '抵用券', subtitle: '63', image: require('../images/icon_mine_voucher.png')},
+      {title: '会员卡', subtitle: '2', image: require('../images/icon_mine_membercard.png')}
+    ],
+    [
+      {title: '好友去哪', image: require('../images/icon_mine_friends.png')},
+      {title: '我的评价', image: require('../images/icon_mine_comment.png')},
+      {title: '我的收藏', image: require('../images/icon_mine_collection.png')},
+      {title: '会员中心', subtitle: 'v15', image: require('../images/icon_mine_mineorder.png')},
+      {title: '积分商城', subtitle: '好礼已上线', image: require('../images/icon_mine_member.png')}
+    ],
+    [
+      {title: '客服中心', image: require('../images/icon_mine_service.png')},
+      {title: '关于美团', subtitle: '我要合作', image: require('../images/icon_mine_about.png')}
+    ]
+  ]
 }
