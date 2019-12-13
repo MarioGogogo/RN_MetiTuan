@@ -13,8 +13,9 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  View
-} from 'react-native';
+  View,
+  StatusBar
+} from 'react-native'
 import { Text16, Text14, Paragraph } from '../../common/Text'
 import MineItemCell from './MineItemCell';
 import SpacingView from '../../common/SpacingView'
@@ -149,12 +150,13 @@ export default class MinePage extends Component {
           height: height / 2,
           backgroundColor: '#06C1AE'
         }}/>
+
         <ScrollView
           refreshControl={
             <RefreshControl
               refreshing={this.state.isRefreshing}
               onRefresh={() => this.onHeaderRefresh()}
-              tintColor='gray'
+              tintColor='#fff'
             />
           }>
           {this.renderHeader()}
@@ -170,7 +172,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f3f3f3',
-    marginTop:Platform.OS === 'android'?20:0
+    paddingTop:Platform.OS === 'android'?20:30
   },
   header: {
     backgroundColor: '#06C1AE',

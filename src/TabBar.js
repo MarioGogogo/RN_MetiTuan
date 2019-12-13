@@ -6,15 +6,16 @@ import {
   Text,
   View,
   Image,
-  SafeAreaView
+  SafeAreaView, StatusBar
 } from 'react-native'
 import TabNavigator from 'react-native-tab-navigator'
 import  HomePage from '../src/components/Home/HomePage'
 import NearbyPage from  '../src/components/Nearby/NearbyPage'
-import MinePage_1 from "./components/Mine/MinePage"
-import Icon from 'react-native-vector-icons/dist/Ionicons';
-import Theme from './common/theme'
+import MinePage from "./components/Mine/MinePage"
+import OrderPage from "./components/Order/OrderPage"
+
 import { inject, observer } from 'mobx-react';
+
 
 //默认选项
 const TAB_HOME_NORMAL = require('./images/tabbar_homepage.png');
@@ -69,12 +70,12 @@ export default class MainPage extends Component {
        case 'Order':
          tabNomal = TAB_ORDER_NORMAL;
          tabPress = TAB_ORDER_PRESS;
-         tabPage = <HomePage {...this.props}/>;
+         tabPage = <OrderPage {...this.props}/>;
          break;
        case 'Mine':
          tabNomal = TAB_MINE_NORMAL;
          tabPress = TAB_MINE_PRESS;
-         tabPage = <MinePage_1 {...this.props}/>;
+         tabPage = <MinePage {...this.props}/>;
          break;
        default:
      }
@@ -86,6 +87,7 @@ export default class MainPage extends Component {
          title= {title}
          //标题样式
          titleStyle={styles.tabText}
+
          badgeText={''}
          //选中时标题文字样式
          selectedTitleStyle={styles.selectedTabText}
@@ -106,16 +108,13 @@ export default class MainPage extends Component {
   render() {
     const {loginStore} = this.props
     return (
-      <SafeAreaView style={styles.container}>
         <TabNavigator style={styles.tabStyle}>
           {this.renderTabView('首页','Home',HomePage,false)}
           {this.renderTabView('附近', 'Nearby', NearbyPage, false)}
-          {this.renderTabView('逛一逛', 'Discover', MinePage_1, false)}
-          {this.renderTabView('订单', 'Order', HomePage, false)}
-          {this.renderTabView('我的', 'Mine', MinePage_1, false)}
+          {this.renderTabView('逛一逛', 'Discover', MinePage, false)}
+          {this.renderTabView('订单', 'Order', OrderPage, false)}
+          {this.renderTabView('我的', 'Mine', MinePage, false)}
         </TabNavigator>
-      </SafeAreaView>
-
     );
   }
 }

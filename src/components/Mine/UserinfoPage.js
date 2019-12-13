@@ -10,8 +10,8 @@ import {
   TouchableOpacity,
   Dimensions,
   Image,
-  View
-} from 'react-native';
+  View, Platform
+} from 'react-native'
 import {Actions, Scene, Router} from 'react-native-router-flux'
 import NavigationBar from '../../common/NavigationBar'
 // import ViewUtils from '../util/ViewUtils'
@@ -66,7 +66,7 @@ export default class UserinfoPage extends Component {
       <View style={styles.flexStyle}>
         <NavigationBar
           navigator={this.props.navigator}
-          style={{backgroundColor:'#ffffff'}}
+          style={{backgroundColor:'#ffffff', paddingTop:Platform.OS === 'android'?20:30}}
           popEnabled={false}
           // leftButton={ViewUtils.getLeftBlackButton(() => this.onBackPress())}
           title='个人信息'

@@ -12,6 +12,8 @@ import {
   Text,
   View
 } from 'react-native'
+import {Actions, Scene, Router} from 'react-native-router-flux'
+
 
 const NAV_BAR_HEIGHT_IOS = 40;
 const NAV_BAR_HEIGHT_ANDROID = 50;
@@ -60,9 +62,13 @@ export default class NavigationBar extends Component {
         <StatusBar {...this.props.statusBar}  style={styles.statusBar}/>
       </View> : null;
 
-    let titleView = this.props.titleView ? this.props.titleView :
-      <Text style={[styles.title, {color: this.props.titleColor}]} ellipsizeMode="head"
-            numberOfLines={1}>{this.props.title}</Text>;
+    let titleView = this.props.titleView
+      ? this.props.titleView :
+      <Text style={[styles.title, {color: this.props.titleColor}]}
+            ellipsizeMode="head"
+            numberOfLines={1}>
+        {this.props.title}
+      </Text>;
 
     let content = this.props.hide ? null :
       <View style={styles.navBar}>
@@ -74,7 +80,7 @@ export default class NavigationBar extends Component {
       </View>;
     return (
       <View style={[styles.container, this.props.style]}>
-        {statusBar}
+        {/*{statusBar}*/}
         {content}
       </View>
     )
@@ -123,6 +129,6 @@ const styles = StyleSheet.create({
   },
   statusBar: {
     height: Platform.OS === 'ios' ? STATUS_BAR_HEIGHT : 0,
-    backgroundColor:'transparent'
+    backgroundColor:'red'
   },
 });
