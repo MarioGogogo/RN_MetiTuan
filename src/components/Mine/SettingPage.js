@@ -46,10 +46,8 @@ export default class SettingPage extends Component {
   }
 
   logOut =()=> {
-    Actions.login()
-    // this.props.navigator.push({
-    //   component: LoginPage,
-    // })
+    //重置路由
+    Actions.reset('login')
   }
 
   renderView() {
@@ -83,6 +81,7 @@ export default class SettingPage extends Component {
         <NavigationBar
           style={{backgroundColor:'#ffffff',paddingTop:20}}
           popEnabled={false}
+          leftButton = {true}
           // leftButton={ViewUtils.getLeftBlackButton(() => this.onBackPress())}
           title='设置'
           titleColor='#000000'

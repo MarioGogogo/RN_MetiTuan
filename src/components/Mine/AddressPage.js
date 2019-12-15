@@ -78,10 +78,10 @@ export default class AddressPage extends Component {
       <View style={styles.wrap}>
         <View style={styles.searchView}>
           <FontAwesome
-            style={{position:"absolute",top:15,left:23,zIndex:100}}
-            name={'search'}
-            size={13}
-            color={"#999"}
+              style={{position:"absolute",top:15,left:23,zIndex:100}}
+              name={'search'}
+              size={13}
+              color={"#999"}
           />
           <TextInput ref="search"
                      style={styles.textInput}
