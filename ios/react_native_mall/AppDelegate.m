@@ -18,7 +18,7 @@
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 
   NSURL *jsCodeLocation;
-   jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.114:8081/index.ios.bundle?platform=ios&dev=true"];
+   jsCodeLocation = [NSURL  URLWithString:@"http://192.168.0.105:8081/index.ios.bundle?platform=ios&dev=true"];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"react_native_mall"

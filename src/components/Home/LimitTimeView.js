@@ -17,6 +17,7 @@ import {
   Image,
   ScrollView
 } from 'react-native';
+import {Actions, Scene, Router} from 'react-native-router-flux'
 import {scaleWidth,scaleHeight} from '../../util/ScreenUtil'
 import LocalImg from '../../config/images'
 import CountDownView from '../../common/CountDownView'
@@ -31,7 +32,7 @@ export default class LimitTimeView extends Component {
   }
 
   detail() {
-    alert('跳转详情')
+    Actions.detail()
   }
 
   render() {

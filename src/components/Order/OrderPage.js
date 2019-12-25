@@ -13,10 +13,9 @@ import {
 } from 'react-native'
 import ScrollableTabView, {DefaultTabBar} from 'react-native-scrollable-tab-view';
 import NavigationBar from '../../common/NavigationBar'
-// import ViewUtils from '../util/ViewUtils'
 import OrderItemView from "./OrderItemView";
 import Separator from "../../common/Separator";
-
+// import ViewUtils from '../util/ViewUtils'
 const { width } = Dimensions.get('window');
 
 export default class OrderPage extends Component {

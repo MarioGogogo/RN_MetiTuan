@@ -2312,5 +2312,6 @@ export default {
       {title: '客服中心', image: require('../images/icon_mine_service.png')},
       {title: '关于美团', subtitle: '我要合作', image: require('../images/icon_mine_about.png')}
     ]
-  ]
+  ],
+
 }

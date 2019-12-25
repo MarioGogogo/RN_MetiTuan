@@ -1,22 +1,20 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow 模仿登录界面
+ * @flow 账号登录界面
  */
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
   Dimensions,
   StyleSheet,
   Text,
-  Image,
   TextInput,
   TouchableOpacity,
   View
 } from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
-
+import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 const {width, height} = Dimensions.get('window')
 
 export default class PasswordLoginView extends Component {
@@ -34,10 +32,24 @@ export default class PasswordLoginView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Toast ref="toast"/>
+        <Toast
+          ref="toast"
+          style={{backgroundColor:'#000'}}
+          position='top'
+          positionValue={200}
+          fadeInDuration={750}
+          fadeOutDuration={1000}
+          opacity={0.8}
+          textStyle={{color:'#fff'}}
+        />
+
         <View style={styles.styleContainer}>
-          <Image style={styles.icon}
-                 source={require('../../images/ic_mobile.png')}/>
+          <FontAwesome
+            name={'id-badge'}
+            style={styles.icon}
+            size={20}
+            color={"#06C1AE"}
+          />
           <TextInput
             style={styles.styleUserName}
             placeholder='请输入用户名'
@@ -49,9 +61,14 @@ export default class PasswordLoginView extends Component {
         </View>
         <View style={styles.styleLine}/>
 
+
         <View style={styles.stylePassContainer}>
-          <Image style={styles.icon}
-                 source={require('../../images/ic_message.png')}/>
+          <FontAwesome
+            name={'keyboard-o'}
+            style={styles.icon}
+            size={20}
+            color={"#06C1AE"}
+          />
           <TextInput
             style={styles.stylePassWord}
             placeholder='请输入密码'
@@ -88,30 +105,29 @@ const styles = StyleSheet.create({
   styleContainer: {
     backgroundColor: '#ffffff',
     height: 40,
-    marginTop:30,
+    marginTop:10,
     width: width,
     paddingLeft: 20,
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   stylePassContainer: {
+    flexDirection:"row",
+    justifyContent: 'flex-start',
     backgroundColor: '#ffffff',
     height: 40,
     width: width,
     paddingLeft: 20,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+
   },
   icon: {
-    width: 20,
-    height: 20,
     alignItems: 'center',
     alignSelf: 'center',
   },
   styleUserName: {
     backgroundColor: '#ffffff',
     height: 40,
-    width: width,
+    width: width*0.8,
     textAlign: 'left',
     paddingLeft:10,
   },
@@ -123,7 +139,7 @@ const styles = StyleSheet.create({
   stylePassWord: {
     backgroundColor: '#ffffff',
     height: 40,
-    width: width,
+    width: width*0.8,
     textAlign: 'left',
     paddingLeft:10
   },

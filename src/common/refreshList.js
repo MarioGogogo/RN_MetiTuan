@@ -103,6 +103,7 @@ class RefreshListView extends PureComponent {
         ref={this.props.listRef}
         onRefresh={this.onHeaderRefresh}
         refreshing={this.props.refreshState == RefreshState.HeaderRefreshing}
+        ListHeaderComponent = {this.props.ListHeaderComponent}
         ListFooterComponent={this.renderFooter}
         onEndReached={() => {
           console.log('---onEndReached----');

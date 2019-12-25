@@ -95,8 +95,10 @@ requestRecommend =  () => {
         <View>
             <MenuView menuInfos={this.loadMenuInfos()} onMenuSelected={(index) => this.onMenuSelected(index)} />
             <SpacingView/>
+            {/*打折*/}
             <ActiveView infos={this.state.actives} onGridSelected={(index) => this.onGridSelected(index)} />
             <SpacingView/>
+            {/*抢购*/}
             <LimitTimeView {...this.props}/>
             <SpacingView/>
             <View style={styles.recommendHeader}>

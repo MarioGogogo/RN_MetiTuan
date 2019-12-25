@@ -9,7 +9,8 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
-  View, StatusBar
+  View, StatusBar,
+  Image
 } from 'react-native'
 import {Actions, Scene, Router} from 'react-native-router-flux'
 
@@ -68,6 +69,16 @@ export default class SettingPage extends Component {
     )
   }
 
+  getLeftBlackButton=(callBack)=> {
+    return <TouchableOpacity
+      style={{padding: 8}}
+      onPress={callBack}>
+      <Image
+        style={{width: 26, height: 26,}}
+        source={require('../../images/ic_back_white.png')}/>
+    </TouchableOpacity>
+  }
+
   render() {
     return (
       <View style={styles.flexStyle}>
@@ -81,8 +92,8 @@ export default class SettingPage extends Component {
         <NavigationBar
           style={{backgroundColor:'#ffffff',paddingTop:20}}
           popEnabled={false}
-          leftButton = {true}
-          // leftButton={ViewUtils.getLeftBlackButton(() => this.onBackPress())}
+          // leftButton = {true}
+          leftButton={this.getLeftBlackButton(() => this.onBackPress())}
           title='设置'
           titleColor='#000000'
         />

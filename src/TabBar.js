@@ -13,7 +13,7 @@ import  HomePage from '../src/components/Home/HomePage'
 import NearbyPage from  '../src/components/Nearby/NearbyPage'
 import MinePage from "./components/Mine/MinePage"
 import OrderPage from "./components/Order/OrderPage"
-
+import DiscoverPage from './components/Discover/DiscoverPage'
 import { inject, observer } from 'mobx-react';
 
 
@@ -65,7 +65,7 @@ export default class MainPage extends Component {
        case 'Discover':
          tabNomal = TAB_DISCOVER_NORMAL;
          tabPress = TAB_DISCOVER_PRESS;
-         tabPage = <HomePage />;
+         tabPage = <DiscoverPage />;
          break;
        case 'Order':
          tabNomal = TAB_ORDER_NORMAL;
@@ -111,7 +111,7 @@ export default class MainPage extends Component {
         <TabNavigator style={styles.tabStyle}>
           {this.renderTabView('首页','Home',HomePage,false)}
           {this.renderTabView('附近', 'Nearby', NearbyPage, false)}
-          {this.renderTabView('逛一逛', 'Discover', MinePage, false)}
+          {this.renderTabView('逛一逛', 'Discover', DiscoverPage, false)}
           {this.renderTabView('订单', 'Order', OrderPage, false)}
           {this.renderTabView('我的', 'Mine', MinePage, false)}
         </TabNavigator>
