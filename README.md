@@ -78,4 +78,8 @@ Copyright © 2019 [mario](https://github.com/MarioGogogo).<br />
 This project is [MIT](https://github.com/MarioGogogo/RN_MetiTuan/blob/master/LICENSE) licensed.
 
 ***
+<<<<<<< HEAD
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+=======
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+>>>>>>> cc04ef86963f04328f79f204fe8496cb11a2ee74

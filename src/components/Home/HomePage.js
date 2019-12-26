@@ -118,8 +118,8 @@ requestRecommend =  () => {
   }
 
   onCellSelected = (info: Object) => {
-    StatusBar.setBarStyle('default', false)
-     alert('跳转任务详情')
+    // StatusBar.setBarStyle('default', false)
+    Actions.classify()
     // this.props.navigation.navigate('GroupPurchase', { info: info })
   }
 

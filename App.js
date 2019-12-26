@@ -12,7 +12,7 @@ import PasswordLoginView from "./src/components/Mine/PasswordLoginView"
 import AboutPage from "./src/components/Mine/AboutPage"
 import AddressPage from "./src/components/Mine/AddressPage"
 import DetailPage from './src/components/Detail/DetailPage'
-
+import ClassifyPage from './src/components/Classify/ClassifyPage'
 
 
 class App extends Component {
@@ -41,7 +41,7 @@ class App extends Component {
         <Scene key="about"  hideNavBar component={AboutPage} title="About"/>
         <Scene key="address"  hideNavBar component={AddressPage} title="Address"/>
         <Scene key="detail"  hideNavBar component={DetailPage} title="Detail"/>
-        {/*<Scene key="order"    hideNavBar component={Order} title="Order"/>*/}
+        <Scene key="classify"    hideNavBar component={ClassifyPage} title="Classify"/>
         {/*<Scene key="colorTheme" hideNavBar component={ColorTheme} title="ColorTheme"/>*/}
       </Scene>
       {/* Loading和Toash全局加载 */}

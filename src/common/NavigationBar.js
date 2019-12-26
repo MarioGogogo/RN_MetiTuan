@@ -1,9 +1,8 @@
 /**
  * NavigationBar
- * @flow
+ * @flow 导航组件
  */
 import React, {Component} from 'react'
-
 
 import {
   StyleSheet,
@@ -14,12 +13,23 @@ import {
   View
 } from 'react-native'
 
+// ios高度
 const NAV_BAR_HEIGHT_IOS = 40
+// Android高度
 const NAV_BAR_HEIGHT_ANDROID = 50
+//普通高度
 const STATUS_BAR_HEIGHT = 20
 
 
 export default class NavigationBar extends Component {
+  static defaultProps = {
+    statusBar: {
+      barStyle: 'default',
+      hidden: false,
+      translucent: false,
+      animated: false,
+    },
+  }
 
   constructor(props) {
     super(props)
@@ -31,14 +41,7 @@ export default class NavigationBar extends Component {
   }
 
 
-  static defaultProps = {
-    statusBar: {
-      barStyle: 'default',
-      hidden: false,
-      translucent: false,
-      animated: false,
-    },
-  }
+
 
 
   getButtonElement(data = {}, style) {
