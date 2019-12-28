@@ -59,7 +59,7 @@ export default class ShopBar extends Component {
           </View>
           <TouchableOpacity  onpress={() => this.balance.bind(this)}>
             {!lens.maxPrice ?
-              <Text style={styles.price}>{"￥6元起"}</Text> :
+              <Text style={styles.price}>{"￥20元起"}</Text> :
               <Text style={[styles.price, {backgroundColor: "#00c257", color: "#fff"}]}>{"去结算"}</Text>}
           </TouchableOpacity>
         </View>
