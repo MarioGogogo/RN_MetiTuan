@@ -36,7 +36,7 @@
     "mobx-react-devtools": "^4.2.15",
     "qs": "^6.7.0",
     "react": "16.8.3",
-    "react-native": "0.59.9",
+    "react-native": "0.62.3",
     "react-native-easy-toast": "^1.2.0",
     "react-native-loading-spinner-overlay": "^1.0.1",
     "react-native-router-flux": "^4.0.6",
